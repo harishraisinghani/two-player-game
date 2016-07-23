@@ -1,14 +1,19 @@
-@players = [
+class Players
+  attr_accessor :name, :score, :lives
 
-  {
-      score: 0,
-      lives: 3
-  },
+  def initialize(name)
+    @name = name
+    @score = 0
+    @lives = 3
+  end
 
-  {  
-      score: 0,
-      lives: 3
-  },
-]
+  def gain_point
+    @score += 1
+  end
+
+  def lose_life
+    @lives -= 1
+  end
+end
 
 
